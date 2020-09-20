@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+// ONLY those variables that are needed when overriding vendor variables
+@import "top-variables.scss";
+
+// Variables in vendor Sass files (e.g. Bootstrap) need to be overridden before 
+// importing the respective vendor Sass files
+@import "vendor-variables-overrides.scss";
+
+// Vendor SCSS/CSS (e.g. Bootstrap)
+@import "vendor/bootstrap/bootstrap.scss";
+
+// Own helpers. Contains variables, mixins, functions, etc.
+@import "helpers.scss";
+
+// Global styles
+@import "global.scss";
+
+// Any overrides that may need to be made in a vendor SCSS code (except 
+// variables, which are handled above in vendor-variables-overrides.scss)
+@import "vendor-overrides.scss";
+
+// Blocks
+// When using BEM, give each block its own file under a 'blocks' directory for 
+// easier management
+// @import "blocks/something";
+
+// All other imports go here
+// @import "something"
+
+
+
+// Custom styles
+@import "custom";

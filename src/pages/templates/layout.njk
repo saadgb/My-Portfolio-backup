@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block meta %} {% endblock %}
+</head>
+
+<body class="{{ body_classes }}" style="{{ body_style }}">
+    {% block content %} {% endblock %}
+    
+    {% include "templates/partials/footer.njk" %}
+    
+    <script src='assets/js/vendor/jquery-3.5.1.min.js'></script>
+    <script src='assets/js/vendor/bootstrap.bundle.min.js'></script>
+    <script src='assets/js/project-custom.js'></script><!-- replace 'project' with project name -->
+    <script src='assets/js/project-caller.js'></script><!-- replace 'project' with project name -->
+</body>
+
+</html>

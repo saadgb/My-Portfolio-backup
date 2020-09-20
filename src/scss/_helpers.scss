@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+//
+// Typography
+//
+
+$font-size-base-px: 16;
+// $font-family-heading: $font-family-base;
+
+// Convert px to rem
+//
+// @param {Number} $size - size in px (unitless)
+// @return {Number} - size in rem (with unit)
+@function px2rem($size) {
+    @return $size / $font-size-base-px + rem;
+}
+
+// Convert px to em
+//
+// @param {Number} $size - size in px (unitless)
+// @param {Number} $parent-size - size of parent in px (unitless)
+// @return {Number} - size in em (with unit)
+@function px2em($size, $parent-size) {
+    @return $size / $parent-size + em;
+}
+
+// Mixin for writing @font-face rules
+//
+// @param {String} $font-name - the name that will be referred to in the font-family property
+// @param {String} $font-slug - font file name without the extension
+// @param {String} $weight - font-weight
+// @param {String} $style - font-style
+@mixin font-face($font-name, $font-slug, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: #{$font-name};
+        src: url('../fonts/#{$font-slug}.woff2') format('woff2'),
+             url('../fonts/#{$font-slug}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+// Mixin for writing font-size and line-height
+//
+// @param {Number} $size - size in px (unitless)
+// @param {Number} $line - line-height in px (unitless)
+// @param {Boolean} $include-line-ht - whether to output line-height or not
+@mixin font-size ($size: $font-size-base-px, $line: $font-size-base-px * $line-height-base, $include-line-ht: true) {
+    font-size: px2rem($size);
+    @if $include-line-ht == true { line-height: $line / $size; }
+}
+
+//
+// Colors
+//
+
+// Add percentage of white to a color
+//
+// @param {Color} $color
+// @param {Percentage} $percent -- weight in percentage (e.g. 25%)
+// @return {Color}
+@function tint($color, $percent) {
+    @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+//
+// @param {Color} $color
+// @param {Percentage} $percent -- weight in percentage (e.g. 25%)
+// @return {Color}
+@function shade($color, $percent) {
+    @return mix(black, $color, $percent);
+}
+
+
+//
+// Misc
+//
+
+// @mixin something() {
+//     ...
+// }
+
+// Mixin for calculating paddings, margins
+//
+// @param {String} $prop - may be "margin" or "padding"
+// @param {Boolean} $shorthand - whether $val contains shorthand values or not
+// @param {List} $val - list of numbers (pixels, unitless)
+//               if $shorthand == false, $val must contain all 4 values (top, right, bottom, left)
+//               if $shorthand == true, $val can have standard CSS shorthand values
+@mixin rem-vals ($prop, $shorthand, $val...) {
+    @if $shorthand == true {
+        $n: length($val);
+        $i: 1;
+        $rem-list: ();
+        @while $i <= $n {
+            @if nth($val, $i) == auto {
+                $rem-list: append($rem-list, auto);
+            } @else if nth($val, $i) != 0 {
+                $computed: px2rem( nth($val, $i) );
+                $rem-list: append($rem-list, $computed);
+            } @else {
+                $rem-list: append($rem-list, 0);
+            }
+            $i: $i + 1;
+        }
+        #{$prop}: $rem-list;
+    
+    } @else {
+        // $shorthand is false
+        $t: nth($val, 1);
+        $r: nth($val, 2);
+        $b: nth($val, 3);
+        $l: nth($val, 4);
+        
+        @if $t != 0 { #{$prop}-top:    px2rem($t); }
+        @if $r != 0 { #{$prop}-right:  px2rem($r); }
+        @if $b != 0 { #{$prop}-bottom: px2rem($b); }
+        @if $l != 0 { #{$prop}-left:   px2rem($l); }
+    }
+}
+

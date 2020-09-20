@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+// This file contains ONLY those variables that are needed when overriding 
+// vendor variables in vendor-variables-overrides.scss
+
+$font-weight-thin:       100;
+$font-weight-extralight: 200;
+$font-weight-light:      300;
+$font-weight-regular:    400;
+$font-weight-medium:     500;
+$font-weight-semibold:   600;
+$font-weight-bold:       700;
+$font-weight-extrabold:  800;
+$font-weight-black:      900;
+
+
+
+
+
+
+
+// Bootstrap overrides
+
+$orange:                        #FF3E4C !default;
+
+/*$primary-grad:                  linear-gradient(100deg,#f9643d,#E91E63) !default;*/
+$primary-grad:                  linear-gradient(140deg,#1a79ff,#1CA68A) !default;
+$primary-grad-nav:				 linear-gradient(100deg,#F7F7FF,#F6f6FF) !default;
+
+// Naming
+$primary:       $orange !default;
+$yellow: 		#ffc107;
+
+
+$btn-hover-effect:		     #2C2C2C;
+$btn-hover-effect2:		     #FF3E4C;
+$btn-hover-effect3:		     #4b32ba;
+
+
+// Responsive fonts enable
+
+$enable-responsive-font-sizes:   true;
+
+
+// Fonts
+
+$sans-serif-family:          'Montserrat', 'Helvetica Neue',  Arial, sans-serif !default;
+$big-h-font:			     'Suez One', serif;

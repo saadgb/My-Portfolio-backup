@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+// Webfonts
+// (See mixin definition in _helpers.scss for details. Examples below)
+@include font-face("InterWeb", "Inter-Regular",         $font-weight-regular,   normal);
+// @include font-face("InterWeb", "Inter-Italic",          $font-weight-regular,   italic);
+// @include font-face("InterWeb", "Inter-Medium",          $font-weight-medium,    normal);
+// @include font-face("InterWeb", "Inter-MediumItalic",    $font-weight-medium,    italic);
+// @include font-face("InterWeb", "Inter-SemiBold",        $font-weight-semibold,  normal);
+// @include font-face("InterWeb", "Inter-SemiBoldItalic",  $font-weight-semibold,  italic);
+// @include font-face("InterWeb", "Inter-Bold",            $font-weight-bold,      normal);
+// @include font-face("InterWeb", "Inter-BoldItalic",      $font-weight-bold,      italic);
+// @include font-face("InterWeb", "Inter-ExtraBold",       $font-weight-extrabold, normal);
+// @include font-face("InterWeb", "Inter-ExtraBoldItalic", $font-weight-extrabold, italic);
+// @include font-face("InterWeb", "Inter-Black",           $font-weight-black,     normal);
+// @include font-face("InterWeb", "Inter-BlackItalic",     $font-weight-black,     italic);
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #000; // Change this according to the design
+}

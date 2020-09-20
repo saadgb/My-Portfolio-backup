@@ -1,0 +1,31 @@
+{% macro meta(title='') %}
+<!-- meta.njk -->
+<meta charset="utf-8">
+{% if title == '' %}
+<title>UI starter kit</title><!-- change this -->
+{% else %}
+<title>{{title}} - UI starter kit</title><!-- change this -->
+{% endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+<!--
+<link rel="icon" href="assets/img/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="assets/img/favicons/favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="assets/img/favicons/favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="assets/img/favicons/favicon-270x270.png" />
+-->
+
+<!-- end meta.njk -->
+{% endmacro %}
+
+
+{% macro header(currentPage='') %}
+<!-- header.njk -->
+<header role="banner" class="">
+    <div class="container">
+        <p>Hi! I am the header!</p>
+    </div>
+</header>
+<!-- end header.njk -->
+{% endmacro %}
