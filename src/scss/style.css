@@ -7860,10 +7860,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   /*background-color: #f8f8ff;*/
-  background-image: url(../img/body-bg.svg);
-  background-position: top left;
-  background-repeat: repeat-y;
-  background-size: cover; }
+  	/*background-image: url(../img/body-bg.svg);
+      background-position: top left;
+      background-repeat: repeat-y;
+      background-size: cover;*/ }
 
 .scrollspy-example {
   position: relative;
@@ -7872,6 +7872,9 @@ body {
 
 h2, .h2 {
   font-size: 2.5em;
+  margin-bottom: 20px; }
+
+.p-heads {
   margin-bottom: 20px; }
 
 .title {
@@ -7893,8 +7896,8 @@ img {
   -webkit-transition: box-shadow .2s ease-in; }
 
 .bg-nav {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  background-color: rgba(255, 255, 255, 0.99); }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.065);
+  background-color: #fff; }
 
 .navbar .navbar-nav .nav-link:not(.btn) {
   text-transform: uppercase;
@@ -7999,12 +8002,21 @@ img {
   float: right;
   padding-top: 50px; }
 
-@media only screen and (min-width: 320px) and (max-width: 991px) {
-  .hero-art {
-    padding-top: 0px; }
-
-  .text-aligner {
-    height: 400px !important; } }
+/*@media only screen and (min-width:320px) and (max-width:991px) {
+    .hero-art {
+        padding-top: 0px;
+    }
+    
+    .text-aligner
+    {
+       height: 400px !important;  
+        
+    }
+    
+    
+    
+    
+}*/
 @media only screen and (min-width: 1441px) and (max-width: 2560px) {
   .desktop__text {
     width: 100% !important; } }
@@ -8037,7 +8049,7 @@ img {
 .text-aligner {
   display: flex;
   align-items: center;
-  height: 500px; }
+  height: 100vh; }
 
 /* -------------------------------- 
 
@@ -8375,6 +8387,9 @@ xrotate-2
     bottom: 0;
     /* transform: skewY(-1.5deg);*/
     transform-origin: 100%; }
+
+.mb-cu {
+  margin-bottom: 150px; }
 
 /*MYSELF START*/
 .destination {
@@ -8817,7 +8832,7 @@ ul.social-icons {
   background-image: linear-gradient(100deg, #f9643d, #E91E63);
   width: 50px;
   border-radius: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   height: 5px; }
 
 .card-columns {
@@ -9004,3 +9019,24 @@ ul.social-icons {
 .modal-header {
   background-image: linear-gradient(100deg, #f9643d, #E91E63);
   color: #fff; }
+
+/* no circle */
+.flickity-button {
+  background: transparent; }
+
+.flickity-page-dots .dot {
+  display: none !important; }
+
+/* big previous & next buttons */
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  display: none; }
+
+/* icon color */
+.flickity-button-icon {
+  fill: white; }
+
+/* hide disabled button */
+.flickity-button:disabled {
+  display: none; }
