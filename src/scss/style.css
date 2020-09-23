@@ -8389,7 +8389,7 @@ xrotate-2
     transform-origin: 100%; }
 
 .mb-cu {
-  margin-bottom: 150px; }
+  margin-bottom: 100px; }
 
 /*MYSELF START*/
 .destination {
@@ -8984,7 +8984,8 @@ ul.social-icons {
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  z-index: 5; }
 
 #return-to-top i {
   color: #fff;
