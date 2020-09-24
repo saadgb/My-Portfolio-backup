@@ -142,11 +142,19 @@ img {
     
 }
 
+.breadcrumb
+{
+    
+    margin-bottom: 20px;
+}
+
+
+
 
 .navbar p {
     display: inline-block;
     margin: 0;
-  
+      letter-spacing: 0.1111111111111111rem;
     font-weight: inherit;
     font-size: inherit;
 }
@@ -1622,8 +1630,8 @@ ul.social-icons {
 
 #ux-skills
 {
-   margin-bottom: 35px; 
- background-image: url(../img/memphis-colorful.png);
+   margin-bottom: 80px; 
+ /*background-image: url(../img/memphis-colorful.png);*/
   
 }
 
