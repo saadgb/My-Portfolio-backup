@@ -7900,10 +7900,6 @@ img {
   /*box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);*/
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1); }
 
-.card:hover {
-  box-shadow: 1px 8px 20px grey;
-  -webkit-transition: box-shadow .2s ease-in; }
-
 .bg-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.065);
   background-color: #fff; }
@@ -9035,24 +9031,24 @@ ul.social-icons {
   color: #fff; }
 
 /* no circle */
-.flickity-button {
+.home .flickity-button {
   background: transparent; }
 
-.flickity-page-dots .dot {
+.home .flickity-page-dots .dot {
   display: none !important; }
 
 /* big previous & next buttons */
-.flickity-prev-next-button {
+.home .flickity-prev-next-button {
   width: 100px;
   height: 100px;
   display: none; }
 
 /* icon color */
-.flickity-button-icon {
+.home .flickity-button-icon {
   fill: white; }
 
 /* hide disabled button */
-.flickity-button:disabled {
+.home .flickity-button:disabled {
   display: none; }
 
 .speekio-project .list-group-item {
