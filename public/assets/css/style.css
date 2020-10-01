@@ -9768,8 +9768,17 @@ body {
     background-size: cover;*/
 }
 
+.jumbotron-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vh100 {
+  height: 100vh;
+}
+
 .bg-gr {
-  background-color: #f8f9fa;
+  background-color: #f7f7f7;
 }
 
 .cm-mt {
