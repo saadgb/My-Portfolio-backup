@@ -8405,7 +8405,10 @@ xrotate-2
     transform-origin: 100%; }
 
 .mb-cu {
-  margin-bottom: 100px; }
+  margin-bottom: 170px; }
+
+.mb-cu-other {
+  margin-bottom: 90px; }
 
 /*MYSELF START*/
 .destination {
@@ -9081,3 +9084,24 @@ ul.social-icons {
 
 .card-shadow {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1); }
+
+.speekio-project .display-3 {
+  line-height: 1; }
+
+.double-cards .card {
+  height: 246px; }
+
+.other-portfolio .card-deck {
+  margin-bottom: 25px; }
+
+.other-portfolio h5 {
+  font-weight: bold; }
+
+.other-portfolio .card-footer {
+  border-top: none; }
+
+.other-portfolio .btn-dark {
+  margin-bottom: .60rem; }
+
+.certs-container .card {
+  margin-bottom: 25px; }
